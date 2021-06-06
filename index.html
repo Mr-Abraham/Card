@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://user-images.githubusercontent.com/82175847/120937960-264dfb80-c72e-11eb-9df4-f5d949cc5124.png">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet"> 
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+    body{
+      background: hsl(233, 47%, 7%);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    img{
+      max-width: 100%;
+    }
+
+    
+    .content{
+      border-radius: 5px;
+      background: hsl(244, 38%, 16%);
+      margin: 1em;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      text-align: center;
+    }
+        
+     .ima{
+       position: relative;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 70vw;
+     }
+     .ima::before,
+     .ima::after{
+       content: '';
+       position: absolute;
+       background: hsl(277, 74%, 41%);
+       top: 0;
+       bottom: 3px;
+       left: 0;
+       right: 0;
+       opacity: .4;
+      border-radius: 5px;
+     }
+     
+     
+    .image img{
+      border-radius: 4px;
+      height: 100%;
+      width: 100%;
+    }
+    .box1 h1{
+      font-weight: 800;
+      font-size: 25px;
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 1.3em;
+    }
+    .box1 h1 span{
+      color: hsl(277, 64%, 61%);
+    }
+    .box2 p{
+      color: hsla(0, 0%, 100%, 0.75);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+.analyse h1{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.analyse p{
+  color: hsla(0, 0%, 70%, 0.75);
+  font-weight: 700;
+  font-size: 12px;
+  position: relative;
+  bottom: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+.wrapper{
+  padding: 1.2em;
+}
+
+@media (min-width:800px){
+  .content{
+    box-sizing:border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   margin: 0;
+  }
+  .content ~ *{
+    flex-basis: 100%;
+  }
+  .wrapper{
+    width: 70%;
+  }
+  .ima,
+  .image{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  /* to make image responsive you need width of div to be 100% as i did above */
+  .image img{
+    border-radius: 0;
+
+  }
+  .ima::after,
+  .ima::before{
+    bottom: 0;
+    border-radius: 0;
+    opacity: 0.3;
+  }
+  .info{
+    padding: 1.5em;
+  }
+  .box1{
+    padding: 0;
+  }
+  .box1 h1{
+    width: 80%;
+    font-size: 2.25rem;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    text-align: left;
+    margin-bottom: 1em;
+
+  }
+  .box2 p{
+   font-size: 1em;
+   width: 80%;
+   font-size: 1.1em;
+   left: 43%;
+   transform: translateX(-43%);
+   position: relative;
+   padding: .51em;
+   text-align: left;
+   padding: 0;
+   margin-bottom: 1em ;
+   line-height: 1.6;
+  }
+.box3{
+  box-sizing: border-box;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.4em;
+  padding: 1.71em;
+
+}
+.analyse{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+}
+
+        .attribution {
+           font-size: 11px; 
+           text-align: center;
+           color: hsl(0, 0%, 100%);; }
+    .attribution a { color: hsl(277, 64%, 61%); }
+  </style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="content">
+    <div class="wrapper">
+      <section class="info">
+      <div class="box1">
+        <h1>Get <span>insights</span> that  help your business grow.</h1>
+      </div>
+      <div class="box2">
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.</p>
+      </div>
+      <div class="box3">
+        <div class="analyse">
+          <h1>10k+</h1>
+          <p>COMPANIES</p>
+        </div>
+        <div class="analyse">
+          <h1>314</h1>
+          <P>TEMPLATES</P>
+        </div>
+        <div class="analyse">
+          <h1>12M+</h1>
+          <P>OWNERS</P>
+        </div>
+      </div>
+      </section>
+    </div>
+    <section class="image">
+      <div class="ima">
+        <img class="wrapper-image" src="https://user-images.githubusercontent.com/82175847/120937954-24843800-c72e-11eb-929a-b3c31dfee8db.jpg" alt="">
+      </div>
+    </section>
+  </div>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Mr-Abraham">Mr Abraham</a>.
+  </div>
+</body>
+</html>
